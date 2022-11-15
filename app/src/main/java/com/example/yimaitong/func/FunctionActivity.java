@@ -1,14 +1,16 @@
-package com.example.yimaitong;
+package com.example.yimaitong.func;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class RegisterActivity extends AppCompatActivity {
+import com.example.yimaitong.R;
+
+public class FunctionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_function);
     }
 }
