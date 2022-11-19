@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent intent = null;
 
         //假设正确的密码
-        if(username.equals("Yunjige") && userpassword.equals("123456"))
+        if(username.equals("YiMaitong") && userpassword.equals("123456"))
         {
             // toast普通版
             //Toast.makeText(getApplicationContext(),ok,Toast.LENGTH_SHORT).show();
