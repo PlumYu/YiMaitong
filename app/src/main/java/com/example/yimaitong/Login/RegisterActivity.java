@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         Intent intent = null;
 
         //假设正确的密码
-        if (username.equals("Yunjige") && userpassword.equals(userconfirmpassword)) {
+        if (username.equals("YiMaitong") && userpassword.equals(userconfirmpassword)) {
             // toast普通版
             //Toast.makeText(getApplicationContext(),ok,Toast.LENGTH_SHORT).show();
             //用封装好的类
@@ -69,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             intent = new Intent(RegisterActivity.this, LoginActivity.class);
             startActivity(intent);
         }
-        else if (!username.equals("Yunjige"))
+        else if (!username.equals("YiMaitong"))
         {
             //不正确,弹出登录失败toast
             //提升版，居中显示

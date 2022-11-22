@@ -1,96 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".func.FunctionActivity">
 
-
     <TextView
-        android:layout_marginTop="30dp"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="医脉通"
         android:gravity="center"
+        android:text="医脉通"
+        android:textColor="@color/teal_700"
         android:textSize="31dp"
-        android:textColor="@color/teal_700"/>
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
 
     <LinearLayout
-        android:layout_marginTop="150dp"
+        android:id="@+id/group1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@+id/group2">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="凝血酶原时间 PT："
-            android:textSize="19dp"
-            />
+            android:textSize="17dp" />
+
         <EditText
+            android:id="@+id/et_PT_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="请输入凝血酶原时间PT"
-            />
+            android:hint="请输入凝血酶原时间PT" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="秒"
-            android:textSize="19dp"/>
+            android:textSize="17dp" />
+
     </LinearLayout>
 
+
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:id="@+id/group2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group1"
+        app:layout_constraintBottom_toTopOf="@+id/group3"
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="平均正常 PT："
-            android:textSize="19dp"
-            />
+            android:textSize="17dp" />
+
         <EditText
+            android:id="@+id/et_PT_avg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="平均正常 PT"/>
+            android:hint="平均正常 PT" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="秒"
-            android:textSize="19dp"/>
+            android:textSize="17dp" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:id="@+id/group3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_calculate"
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="国际敏感指数 ISI："
-            android:textSize="19dp"
-            />
+            android:textSize="17dp" />
+
         <EditText
+            android:id="@+id/et_ISI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="国际敏感指数 ISI"/>
+            android:hint="国际敏感指数 ISI" />
     </LinearLayout>
 
     <Button
-        android:layout_marginTop="100dp"
+        android:id="@+id/btn_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="点击计算 INR 的值"/>
+        android:layout_marginTop="88dp"
+        android:text="点击计算 INR 的值"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group3"
+        android:layout_marginBottom="150dp"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
