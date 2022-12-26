@@ -18,13 +18,20 @@
         android:theme="@style/Theme.YiMaitong"
         tools:targetApi="31">
         <activity
+            android:name=".Login.EditActivity"
+            android:label="修改密码"
+            android:exported="false" />
+        <activity
             android:name=".func.FunctionActivity"
+            android:label="医脉通"
             android:exported="false" />
         <activity
             android:name=".Login.RegisterActivity"
+            android:label="注册"
             android:exported="false" />
         <activity
             android:name=".Login.LoginActivity"
+            android:label="登录"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,4 +40,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

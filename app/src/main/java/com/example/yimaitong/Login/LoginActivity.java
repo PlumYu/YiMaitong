@@ -11,6 +11,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.yimaitong.R;
 import com.example.yimaitong.bean.User;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button mBtnLogin;
     private EditText mEtUser;
     private EditText mEtPassword;
+    private TextView T;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mEtUser = findViewById(R.id.et_1);
         mEtPassword = findViewById(R.id.et_2);
         mBtnRegister = findViewById(R.id.btn_register);
+        T = findViewById(R.id.T_cp);
         //注册新用户
         mBtnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +48,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
             }
         });
-        //匹配的对应的用户名和密码
+        T.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = null;
+                intent = new Intent(LoginActivity.this, EditActivity.class);
+                startActivity(intent);
+            }
+        });
         mBtnLogin.setOnClickListener(this);
     }
 private static final int SUCCESS = 1;

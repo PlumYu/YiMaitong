@@ -1,5 +1,6 @@
 package com.example.yimaitong.Login;
 
+import com.example.yimaitong.bean.User;
 import com.example.yimaitong.dao.UserDao;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,17 +32,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText mEtConfirmPassword;
     private EditText mEtPhone;
 
-    private boolean T = true;
-    public  static Connection con = null;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-
         //找到控件
         mBtnConfirm = findViewById(R.id.btn_confirm);
         mBtnCancel = findViewById(R.id.btn_cancel);
@@ -59,7 +53,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 ToastUtil.ShowMsg(getApplicationContext(), "取消成功！");
             }
         });
-        //匹配的对应的用户名和密码
         mBtnConfirm.setOnClickListener(this);
     }
 
@@ -70,14 +63,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 Looper.prepare();
                 Connection con = DBUtil.getConnection();
                 Message message = handler.obtainMessage();
-                boolean ExistsUser = UserDao.findname(name);
+                User ExistsUser = UserDao.findname(name);
                 boolean IsSuccess;
-                if(ExistsUser){
+                if(ExistsUser != null){
                     message.what = 1;
                     message.obj = "用户已经存在，请更换用户名重试！";
                 }else{
                     message.what = 2;
-                    System.out.println("-----------------------------------------------------------------------------------");
                     IsSuccess = UserDao.register(name, password, phone);
                     if(IsSuccess) message.obj = "注册成功！";
                     else message.obj = "注册失败！";
