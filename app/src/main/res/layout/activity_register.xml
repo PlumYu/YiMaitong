@@ -23,12 +23,12 @@
         android:layout_height="50dp"
         android:textSize="16sp"
         android:textColor="@color/black"
-        android:hint="请输入身份证号码"
+        android:hint="请输入用户名"
         android:maxLines="1"
         android:padding="5dp"
-        android:layout_marginTop="100dp"
         android:background="@drawable/bg_username"
         />
+
 
     <EditText
         android:id="@+id/re_2"
@@ -50,6 +50,19 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/bg_username"
         android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/re_4"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_username"
+        android:hint="请输入手机号（仅用于修改密码）"
         android:inputType="textPassword"
         android:maxLines="1"
         android:padding="5dp"
