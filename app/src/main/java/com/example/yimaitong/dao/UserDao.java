@@ -61,7 +61,6 @@ public class UserDao {
 
     public static boolean register(String name, String password, String phone) {
         Connection conn = DBUtil.getConnection();
-        System.out.println("?????");
         String sql = "insert into t_user(name,password,phone) values(?,?,?)";
         PreparedStatement ps = null;
         int count = 0;

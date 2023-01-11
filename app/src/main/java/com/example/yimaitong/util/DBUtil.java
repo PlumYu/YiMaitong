@@ -10,10 +10,10 @@ import java.sql.Statement;
 public class DBUtil {
     // 接口服务器
     private static final String databaseName = "yimaitongdb"; // 数据库名称
-    private static final String ip = "rm-bp1w73wc8hf58i8pyto.mysql.rds.aliyuncs.com"; // 主机名
-    private static final String port = "3306"; // sqlserver 端口号 例如 mysql 的默认端口号为 3306
-    private static final String user = "sa";// 用户名
-    private static final String password = "Qq2477934060";// 密码
+    private static final String ip = ""; // 主机名
+    private static final String port = "3306"; // 端口号 例如 mysql 的默认端口号为 3306
+    private static final String user = "";// 用户名
+    private static final String password = "";// 密码
     //注册msql驱动
     static{
         try{
@@ -22,7 +22,6 @@ public class DBUtil {
             e.printStackTrace();
         }
     }
-    // jdbc:mysql://rm-bp1w73wc8hf58i8pyto.mysql.rds.aliyuncs.com:3306/yimaitongdb;
     private static String url = "jdbc:mysql://" + ip + ":" + port + "/" + databaseName;
 
     public static Connection getConnection(){

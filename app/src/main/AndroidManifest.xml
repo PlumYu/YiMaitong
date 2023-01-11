@@ -31,7 +31,7 @@
             android:exported="false" />
         <activity
             android:name=".Login.LoginActivity"
-            android:label="登录"
+            android:label="Yimaitong"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
